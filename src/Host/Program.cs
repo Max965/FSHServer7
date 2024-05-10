@@ -5,7 +5,6 @@ using FSH.WebApi.Infrastructure;
 using FSH.WebApi.Infrastructure.Common;
 using FSH.WebApi.Infrastructure.Logging.Serilog;
 using Serilog;
-using Serilog.Formatting.Compact;
 
 [assembly: ApiConventionType(typeof(FSHApiConventions))]
 

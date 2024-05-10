@@ -1,8 +1,8 @@
-using System.Text;
 using FSH.WebApi.Application.Common.Caching;
 using FSH.WebApi.Application.Common.Interfaces;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Logging;
+using System.Text;
 
 namespace FSH.WebApi.Infrastructure.Caching;
 

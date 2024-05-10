@@ -1,5 +1,5 @@
-using System.Security.Claims;
 using FSH.WebApi.Application.Common.Interfaces;
+using System.Security.Claims;
 
 namespace FSH.WebApi.Infrastructure.Auth;
 

@@ -1,6 +1,6 @@
-using System.Text;
 using FSH.WebApi.Application.Common.Mailing;
 using RazorEngineCore;
+using System.Text;
 
 namespace FSH.WebApi.Infrastructure.Mailing;
 

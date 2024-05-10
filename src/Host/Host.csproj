@@ -5,9 +5,15 @@
         <AssemblyName>FSH.WebApi.Host</AssemblyName>
     </PropertyGroup>
     <PropertyGroup>
-        <ContainerImageName>dotnet-webapi</ContainerImageName>
-        <ContainerImageTags>1.0.0;latest</ContainerImageTags>
+        <ContainerRepository>dotnet-webapi</ContainerRepository>
+        <ContainerImageTag>latest</ContainerImageTag>
         <PublishProfile>DefaultContainer</PublishProfile>
+        <UserSecretsId>4a2b78f0-4140-4b51-b4ad-6da7a9b53701</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..</DockerfileContext>
+        <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+        <RuntimeIdentifiers>linux-x64</RuntimeIdentifiers>
+        <EnableSdkContainerDebugging>True</EnableSdkContainerDebugging>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
@@ -17,8 +23,8 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
         <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
-        <PackageReference Include="Microsoft.NET.Build.Containers" Version="0.4.0" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Core\Application\Application.csproj" />
@@ -57,5 +63,11 @@
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+      <ContainerEnvironmentVariable Include="ASPNETCORE_HTTPS_PORTS">
+        <Value>443</Value>
+      </ContainerEnvironmentVariable>
+		<ContainerPort Include="80" />
     </ItemGroup>
 </Project>

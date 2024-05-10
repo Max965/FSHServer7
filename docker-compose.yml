@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  host:
+    image: ${DOCKER_REGISTRY-}host
+    build:
+      context: .
+      dockerfile: src/Host/Dockerfile
+    ports:
+      - "5000:80"
+      - "5001:443"

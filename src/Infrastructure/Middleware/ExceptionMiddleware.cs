@@ -1,10 +1,10 @@
-using System.Net;
 using FSH.WebApi.Application.Common.Exceptions;
 using FSH.WebApi.Application.Common.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Localization;
 using Serilog;
 using Serilog.Context;
+using System.Net;
 
 namespace FSH.WebApi.Infrastructure.Middleware;
 

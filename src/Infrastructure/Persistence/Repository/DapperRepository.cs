@@ -1,9 +1,9 @@
-using System.Data;
 using Dapper;
 using Finbuckle.MultiTenant.EntityFrameworkCore;
 using FSH.WebApi.Application.Common.Persistence;
 using FSH.WebApi.Domain.Common.Contracts;
 using FSH.WebApi.Infrastructure.Persistence.Context;
+using System.Data;
 
 namespace FSH.WebApi.Infrastructure.Persistence.Repository;
 

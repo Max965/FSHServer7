@@ -1,7 +1,7 @@
-using System.Security.Claims;
 using FSH.WebApi.Application.Auditing;
 using FSH.WebApi.Application.Identity.Users;
 using FSH.WebApi.Application.Identity.Users.Password;
+using System.Security.Claims;
 
 namespace FSH.WebApi.Host.Controllers.Identity;
 

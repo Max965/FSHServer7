@@ -1,9 +1,9 @@
-using System.Text;
 using FSH.WebApi.Application.Common.Exceptions;
 using FSH.WebApi.Infrastructure.Common;
 using FSH.WebApi.Shared.Multitenancy;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 namespace FSH.WebApi.Infrastructure.Identity;
 

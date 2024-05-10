@@ -1,6 +1,6 @@
-using System.Security.Claims;
 using FSH.WebApi.Application.Identity.Users;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace FSH.WebApi.Infrastructure.Auth.Permissions;
 

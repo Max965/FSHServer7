@@ -1,5 +1,5 @@
-using System.Security.Claims;
 using FSH.WebApi.Application.Identity.Users.Password;
+using System.Security.Claims;
 
 namespace FSH.WebApi.Application.Identity.Users;
 
