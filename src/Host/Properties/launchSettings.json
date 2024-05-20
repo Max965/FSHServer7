@@ -29,7 +29,11 @@
       "commandName": "SdkContainer",
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "environmentVariables": {
-        "ASPNETCORE_URLS": "https://+:443;http://+:80"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://+:443;http://+:80",
+        "ASPNETCORE_HTTPS_PORT": "443",
+        "ASPNETCORE_Kestrel__Certificates__Default__Password": "securePassword123",
+        "ASPNETCORE_Kestrel__Certificates__Default__Path": "/https/aspnetapp.pfx" // Adjust the path to match where the certificate is stored
       },
       "publishAllPorts": true,
       "useSSL": true

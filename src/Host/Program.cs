@@ -4,6 +4,7 @@ using FSH.WebApi.Host.Controllers;
 using FSH.WebApi.Infrastructure;
 using FSH.WebApi.Infrastructure.Common;
 using FSH.WebApi.Infrastructure.Logging.Serilog;
+using Microsoft.AspNetCore.Builder;
 using Serilog;
 
 [assembly: ApiConventionType(typeof(FSHApiConventions))]
@@ -22,6 +23,8 @@ try
     var app = builder.Build();
 
     await app.Services.InitializeDatabasesAsync();
+
+    app.UseHttpsRedirection();
 
     app.UseInfrastructure(builder.Configuration);
     app.MapEndpoints();

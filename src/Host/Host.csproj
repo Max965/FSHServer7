@@ -64,10 +64,4 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
     </ItemGroup>
-    <ItemGroup>
-      <ContainerEnvironmentVariable Include="ASPNETCORE_HTTPS_PORTS">
-        <Value>443</Value>
-      </ContainerEnvironmentVariable>
-		<ContainerPort Include="80" />
-    </ItemGroup>
 </Project>
