@@ -24,6 +24,7 @@ try
 
     await app.Services.InitializeDatabasesAsync();
 
+    app.UseHttpsRedirection();
     app.UseInfrastructure(builder.Configuration);
     app.MapEndpoints();
     app.Run();

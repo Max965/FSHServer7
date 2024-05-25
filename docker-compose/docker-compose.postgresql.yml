@@ -12,7 +12,7 @@ services:
       - ASPNETCORE_HTTPS_PORT=5100
       - ASPNETCORE_Kestrel__Certificates__Default__Password=password!
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/cert.pfx
-      - DatabaseSettings__ConnectionString=Server=postgres;Port=5433;Database=fshdb;User Id=posgresqladmin;Password=posgresqladmin
+      - DatabaseSettings__ConnectionString=Server=postgres-nas;Port=5433;Database=fshdb;User Id=posgresqladmin;Password=posgresqladmin
       - HangfireSettings__Storage__ConnectionString=Server=postgres;Port=5433;Database=fshdb;User Id=posgresqladmin;Password=posgresqladmin
       - DatabaseSettings__DBProvider=postgresql
       - HangfireSettings__Storage__StorageProvider=postgresql

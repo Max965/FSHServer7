@@ -5,9 +5,14 @@
         <AssemblyName>FSH.WebApi.Host</AssemblyName>
     </PropertyGroup>
     <PropertyGroup>
-        <ContainerImageName>dotnet-webapi</ContainerImageName>
+        <ContainerRepository>webapi</ContainerRepository>
         <ContainerImageTags>1.0.0;latest</ContainerImageTags>
         <PublishProfile>DefaultContainer</PublishProfile>
+        <ASPNETCORE_ENVIRONMENT>docker</ASPNETCORE_ENVIRONMENT>
+        <ASPNETCORE_URLS>https://+:5100;http://+:5010</ASPNETCORE_URLS>
+        <ASPNETCORE_HTTPS_PORT>5100</ASPNETCORE_HTTPS_PORT>
+        <ASPNETCORE_Kestrel__Certificates__Default__Password>password!</ASPNETCORE_Kestrel__Certificates__Default__Password>
+        <ASPNETCORE_Kestrel__Certificates__Default__Path>/https/cert.pfx</ASPNETCORE_Kestrel__Certificates__Default__Path>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
@@ -18,7 +23,6 @@
         </PackageReference>
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
         <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
-        <PackageReference Include="Microsoft.NET.Build.Containers" Version="0.4.0" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Core\Application\Application.csproj" />

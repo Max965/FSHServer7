@@ -1,0 +1,21 @@
+services:
+  dotnet-webapi:
+    image: iammukeshm/dotnet-webapi:latest
+    build:
+      context: .
+      dockerfile: src/WebAPI/Dockerfile
+    ports:
+      - "5100:80"
+      - "5010:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80;https://+:443
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_Kestrel__Certificates__Default__Password="password"
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - DatabaseSettings:DBProvider=postgresql
+      - DatabaseSettings:ConnectionString=Host=192.168.1.10;Port=49155;Database=fshDb;Username=postgres;Password=timescale12@!;Include Error Detail=true
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${ASPNETCORE_HTTPS_KEY}:/https/aspnetapp.pfx:ro
+    networks:
+      - fullstackhero

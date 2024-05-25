@@ -1,0 +1,4 @@
+docker run -d -p 5100:5100 -p 5010:5010 -e ASPNETCORE_ENVIRONMENT=docker -e ASPNETCORE_URLS="https://+:5100;http://+:5010" -e ASPNETCORE_HTTPS_PORT=5100 -e ASPNETCORE_Kestrel__Certificates__Default__Password=password! -e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/cert.pfx -v C:/Users/Miles/source/repos/fshwebapi/src/Host/https:/https webapi:latest
+
+
+C:\Users\Miles\source\repos\fshwebapi\src\Host\https\cert.pfx

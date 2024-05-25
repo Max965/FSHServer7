@@ -24,3 +24,6 @@ gw: # git docker workflow to push docker image to the repository based on the ma
 	@echo triggering github workflow to push docker image to container
 	@echo ensure that you have the gh-cli installed and authenticated.
 	gh workflow run dotnet-cicd -f push_to_docker=true
+
+
+#docker run -d -p 5100:5100 -p 5010:5010 -v $env:USERPROFILE\.aspnet\https\cert.pfx:/https/cert.pfx dotnet-webapi:latest
