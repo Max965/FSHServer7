@@ -21,12 +21,23 @@ internal static class Startup
         if (corsSettings.React is not null)
             origins.AddRange(corsSettings.React.Split(';', StringSplitOptions.RemoveEmptyEntries));
 
+        foreach (var origin in origins)
+        {
+            Console.WriteLine($"Allowed Origin: {origin}");
+        }
+
+        // return services.AddCors(opt =>
+        //     opt.AddPolicy(CorsPolicy, policy =>
+        //         policy.AllowAnyHeader()
+        //             .AllowAnyMethod()
+        //             .AllowCredentials()
+        //             .WithOrigins(origins.ToArray())));
+
         return services.AddCors(opt =>
             opt.AddPolicy(CorsPolicy, policy =>
                 policy.AllowAnyHeader()
                     .AllowAnyMethod()
-                    .AllowCredentials()
-                    .WithOrigins(origins.ToArray())));
+                    .AllowAnyOrigin())); // TODO: Remove this in production
     }
 
     internal static IApplicationBuilder UseCorsPolicy(this IApplicationBuilder app) =>

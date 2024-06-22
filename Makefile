@@ -25,5 +25,7 @@ gw: # git docker workflow to push docker image to the repository based on the ma
 	@echo ensure that you have the gh-cli installed and authenticated.
 	gh workflow run dotnet-cicd -f push_to_docker=true
 
-
-#docker run -d -p 5100:5100 -p 5010:5010 -v $env:USERPROFILE\.aspnet\https\cert.pfx:/https/cert.pfx dotnet-webapi:latest
+#run from
+C:\Users\Miles\source\repos\fshwebapi>
+#docker run -d -p 5100:5100 -p 5010:5010 -v C:/Users/Miles/source/repos/fshwebapi/src/Host/https:/https web api:latest
+#docker run -d -p 5100:5100 -p 5010:5010 -e ASPNETCORE_ENVIRONMENT=docker -e ASPNETCORE_URLS="https://+:5100;http://+:5010" -e ASPNETCORE_HTTPS_PORT=5100 -e ASPNETCORE_Kestrel__Certificates__Default__Password=password! -e ASPNETCORE_Kestrel__Certificates__Default__Path=/https/cert.pfx -v C:/Users/Miles/source/repos/fshwebapi/src/Host/https:/https webapi:latest

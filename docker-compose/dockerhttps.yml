@@ -2,3 +2,5 @@ docker run -d -p 5100:5100 -p 5010:5010 -e ASPNETCORE_ENVIRONMENT=docker -e ASPN
 
 
 C:\Users\Miles\source\repos\fshwebapi\src\Host\https\cert.pfx
+
+docker run -d -p 5100:5100 -p 5010:5010 -v C:/Users/Miles/source/repos/fshwebapi/src/Host/https:/https webapi:latest

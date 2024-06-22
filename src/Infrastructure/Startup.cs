@@ -77,13 +77,13 @@ public static class Startup
 
     public static IApplicationBuilder UseInfrastructure(this IApplicationBuilder builder, IConfiguration config) =>
         builder
+            .UseCorsPolicy()
             .UseRequestLocalization()
             .UseStaticFiles()
             .UseSecurityHeaders(config)
             .UseFileStorage()
             .UseExceptionMiddleware()
             .UseRouting()
-            .UseCorsPolicy()
             .UseAuthentication()
             .UseCurrentUser()
             .UseMultiTenancy()
